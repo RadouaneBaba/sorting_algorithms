@@ -8,9 +8,11 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *b, *a, *t, *l;
-	listint_t *head = *list;
+	listint_t *b, *a, *t, *l, *head;
 
+	if (list == NULL)
+		return;
+	head = *list;
 	while (head)
 	{
 		l = head;
