@@ -12,7 +12,7 @@ int main(void)
 	int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
 	int arr2[] = {-5, 10, -3, 8, -1};
 	int arr4[] = {5, 4, 3, 2, 1};
-	int elem[] = {55};
+	int elem[] = {1, 2, 3, 6, 8};
 	size_t n = sizeof(array) / sizeof(array[0]);
 
 	print_array(array, n);
@@ -24,6 +24,6 @@ int main(void)
 	quick_sort(arr2, 5);
 	quick_sort(arr4, 5);
 	quick_sort(NULL, 10);
-	quick_sort(elem, 1);
+	quick_sort(elem, 5);
 	return (0);
 }
