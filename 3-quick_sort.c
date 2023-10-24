@@ -34,11 +34,13 @@ void lomunto_partition(int *arr, size_t low, size_t high, size_t size)
 			j++;
 		}
 		i++;
-		temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-		print_array(arr, size);
-
+		if (i != high)
+		{
+			temp = arr[i];
+			arr[i] = arr[high];
+			arr[high] = temp;
+			print_array(arr, size);
+		}
 		lomunto_partition(arr, i + 1, high, size);
 		if (i > 0)
 			lomunto_partition(arr, low, i - 1, size);
