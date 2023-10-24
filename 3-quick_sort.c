@@ -15,12 +15,12 @@ void lomunto_partition(int *arr, size_t low, size_t high, size_t size)
 	size_t j = low;
 	int p, temp;
 
-	if (low < high)
+	if (low <= high)
 	{
 		p = arr[high];
 		while (j < high)
 		{
-			if (arr[j] < p)
+			if (arr[j] <= p)
 			{
 				i++;
 				if (i < j)
