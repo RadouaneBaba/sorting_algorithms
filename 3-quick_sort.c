@@ -9,14 +9,15 @@
  * @size: size of arr
  */
 
-void lomunto_partition(int *arr, size_t low, size_t high, size_t size)
+void lomunto_partition(int *arr, int low, int high, size_t size)
 {
-	size_t i = low - 1;
-	size_t j = low;
+	int i, j;
 	int p, temp;
 
-	if (low <= high)
+	if (low < high)
 	{
+		j = low;
+		i = low - 1;
 		p = arr[high];
 		while (j < high)
 		{
